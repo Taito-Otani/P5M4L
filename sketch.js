@@ -3,9 +3,8 @@ var s = function(p) {
 //--------------- Setup ---------------------
     p.setup = function() {
         p.createCanvas(innerWidth, innerHeight);
-    
-        window.max.bindInlet('set_value', function(_v1, _v2, _v3) {
-            
+         // カンマ区切りで入力したい値を追加できます。
+        window.max.bindInlet('input', function(_v1, _v2, _v3) {
             v1 = _v1;
             v2 = _v2;
             v3 = _v3;
@@ -18,7 +17,9 @@ var s = function(p) {
         let mx = p.mouseX;
         let my = p.height / 2;
         p.rect(0, 0, mx, my);
-        window.max.outlet('output', p.frameCount);
+
+        // カンマ区切りで出力したい値を追加できます。
+        window.max.outlet('output', p.frameCount, p.windowWidth); 
         p.fill(255);
         p.text(v1, 10, p.height - 20);
         p.text(v2, 10, p.height - 40);
