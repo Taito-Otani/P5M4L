@@ -4,7 +4,7 @@ var s = function(p) {
     p.setup = function() {
         p.createCanvas(innerWidth, innerHeight);
          // カンマ区切りで入力したい値を追加できます。
-        window.max.bindInlet('input', function(_v1, _v2, _v3) {
+        window.max.bindInlet('set_value', function(_v1, _v2, _v3) {
             v1 = _v1;
             v2 = _v2;
             v3 = _v3;

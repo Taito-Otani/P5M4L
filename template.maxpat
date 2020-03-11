@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 695.0, 121.0, 887.0, 684.0 ],
+		"rect" : [ 977.0, 180.0, 887.0, 684.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 439.33331298828125, 80.0, 108.0, 18.0 ],
-					"presentation_linecount" : 2,
 					"text" : "v1        v2       v3"
 				}
 
@@ -56,7 +55,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 270.0, 503.0, 86.0, 18.0 ],
-					"presentation_linecount" : 2,
 					"text" : "windowWidth"
 				}
 
@@ -83,11 +81,11 @@
 					"patching_rect" : [ 36.0, 9.5, 27.0, 27.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.button",
 							"parameter_enum" : [ "off", "on" ],
 							"parameter_type" : 2,
-							"parameter_longname" : "live.button"
+							"parameter_longname" : "live.button",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.button"
 						}
 
 					}
@@ -168,10 +166,10 @@
 					"patching_rect" : [ 690.5, 23.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "live.dial",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[2]"
+							"parameter_longname" : "live.dial[2]",
+							"parameter_shortname" : "live.dial"
 						}
 
 					}
@@ -215,10 +213,10 @@
 					"patching_rect" : [ 614.5, 23.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "live.dial",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[1]"
+							"parameter_longname" : "live.dial[1]",
+							"parameter_shortname" : "live.dial"
 						}
 
 					}
@@ -262,10 +260,10 @@
 					"patching_rect" : [ 549.5, 23.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "live.dial",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial"
+							"parameter_longname" : "live.dial",
+							"parameter_shortname" : "live.dial"
 						}
 
 					}
@@ -591,8 +589,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 393.0, 263.0, 91.0, 20.0 ],
-					"text" : "pak input 0 0 0"
+					"patching_rect" : [ 393.0, 263.0, 116.0, 20.0 ],
+					"text" : "pak set_value 0 0 0"
 				}
 
 			}
@@ -605,7 +603,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 67.0, 454.0, 50.0, 32.0 ],
-					"text" : "12065 320"
+					"text" : "1061 320"
 				}
 
 			}
@@ -824,8 +822,8 @@
 		"parameters" : 		{
 			"obj-21" : [ "live.dial[1]", "live.dial", 0 ],
 			"obj-25" : [ "live.dial[2]", "live.dial", 0 ],
-			"obj-35" : [ "live.button", "live.button", 0 ],
 			"obj-7" : [ "live.dial", "live.dial", 0 ],
+			"obj-35" : [ "live.button", "live.button", 0 ],
 			"parameterbanks" : 			{
 
 			}
