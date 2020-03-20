@@ -20,17 +20,21 @@ var s = function(p) {
 
         // カンマ区切りで出力したい値を追加できます。
         window.max.outlet('output', p.frameCount, p.windowWidth); 
+        
+        //テキストキャンバスに表示
         p.fill(255);
         p.text(v1, 10, p.height - 20);
         p.text(v2, 10, p.height - 40);
         p.text(v3, 10, p.height - 60);
     };
-
+    
+    // マウスを押した時に呼ばれる関数
     p.mousePressed = function(){
      
     }
 
 //--------------- ReSize---------------------
+    //画面サイズの自動調整
   p.windowResized = function() {
         p.resizeCanvas(innerWidth, innerHeight);
   }
