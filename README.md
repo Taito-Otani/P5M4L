@@ -3,4 +3,6 @@ P5.jsのスケッチをM4LデバイスやMaxMspのjWebオブジェクトから�
 
 
 使い方の詳細は以下でみてみてください。
-https://note.com/taito_otani/n/n95b8b9173af6
+
+qiita
+https://qiita.com/TaitoOtani/items/34a5baae0f25981550d3
