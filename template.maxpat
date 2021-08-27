@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 977.0, 180.0, 887.0, 684.0 ],
+		"rect" : [ 861.0, 178.0, 887.0, 684.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,61 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 589.0, 420.0, 192.0, 32.0 ],
+					"text" : "JavaScript Fileを編集できます。\nP5.JSでキャンバスを描きます。"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 589.0, 467.0, 35.0, 20.0 ],
+					"text" : "open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 589.0, 504.0, 67.0, 20.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "sketch.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js sketch.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 157.0, 16.5, 58.0, 20.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-39",
 					"maxclass" : "comment",
@@ -54,7 +108,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 270.0, 503.0, 86.0, 18.0 ],
+					"patching_rect" : [ 214.0, 535.0, 86.0, 18.0 ],
 					"text" : "windowWidth"
 				}
 
@@ -65,7 +119,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 181.0, 503.0, 75.0, 18.0 ],
+					"patching_rect" : [ 125.0, 535.0, 75.0, 18.0 ],
 					"text" : "frameCount"
 				}
 
@@ -79,13 +133,15 @@
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 36.0, 9.5, 27.0, 27.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 4.5, 27.0, 27.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
-							"parameter_type" : 2,
 							"parameter_longname" : "live.button",
 							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.button"
+							"parameter_shortname" : "live.button",
+							"parameter_type" : 2
 						}
 
 					}
@@ -101,7 +157,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 742.0, 80.0, 150.0, 30.0 ],
+					"patching_rect" : [ 742.0, 80.0, 150.0, 32.0 ],
 					"text" : "Live.dialは127段階なので\n255に正規化しています。"
 				}
 
@@ -115,7 +171,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 270.0, 481.0, 50.0, 20.0 ]
+					"patching_rect" : [ 214.0, 513.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -126,7 +182,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "float", "float", "float" ],
-					"patching_rect" : [ 181.0, 454.0, 90.0, 20.0 ],
+					"patching_rect" : [ 125.0, 482.0, 90.0, 20.0 ],
 					"text" : "unpack 0. 0. 0."
 				}
 
@@ -138,7 +194,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 690.5, 111.0, 40.0, 20.0 ],
+					"patching_rect" : [ 694.5, 97.5, 40.0, 20.0 ],
 					"text" : "* 255."
 				}
 
@@ -150,7 +206,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 690.5, 80.0, 42.0, 20.0 ],
+					"patching_rect" : [ 694.5, 66.5, 42.0, 20.0 ],
 					"text" : "/ 127."
 				}
 
@@ -163,13 +219,15 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 690.5, 23.0, 41.0, 48.0 ],
+					"patching_rect" : [ 694.5, 9.5, 41.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 331.5, 4.5, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0,
 							"parameter_longname" : "live.dial[2]",
-							"parameter_shortname" : "live.dial"
+							"parameter_shortname" : "live.dial",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 0
 						}
 
 					}
@@ -185,7 +243,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 614.5, 111.0, 40.0, 20.0 ],
+					"patching_rect" : [ 618.5, 97.5, 40.0, 20.0 ],
 					"text" : "* 255."
 				}
 
@@ -197,7 +255,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 614.5, 80.0, 42.0, 20.0 ],
+					"patching_rect" : [ 618.5, 66.5, 42.0, 20.0 ],
 					"text" : "/ 127."
 				}
 
@@ -210,13 +268,15 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 614.5, 23.0, 41.0, 48.0 ],
+					"patching_rect" : [ 618.5, 9.5, 41.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 379.5, 4.5, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0,
 							"parameter_longname" : "live.dial[1]",
-							"parameter_shortname" : "live.dial"
+							"parameter_shortname" : "live.dial",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 0
 						}
 
 					}
@@ -232,7 +292,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 549.5, 111.0, 40.0, 20.0 ],
+					"patching_rect" : [ 553.5, 97.5, 40.0, 20.0 ],
 					"text" : "* 255."
 				}
 
@@ -244,7 +304,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 549.5, 80.0, 42.0, 20.0 ],
+					"patching_rect" : [ 553.5, 66.5, 42.0, 20.0 ],
 					"text" : "/ 127."
 				}
 
@@ -257,13 +317,15 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 549.5, 23.0, 41.0, 48.0 ],
+					"patching_rect" : [ 553.5, 9.5, 41.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 422.5, 4.5, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0,
 							"parameter_longname" : "live.dial",
-							"parameter_shortname" : "live.dial"
+							"parameter_shortname" : "live.dial",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 0
 						}
 
 					}
@@ -279,7 +341,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 186.66668701171875, 414.0, 380.0, 42.0 ],
+					"patching_rect" : [ 129.0, 414.0, 380.0, 44.0 ],
 					"text" : "「Route 変数名」でp5.js側からの値を受け取れます。\n複数の値が出力される時はunpackで取り出せます。\n"
 				}
 
@@ -290,7 +352,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 303.0, 391.0, 30.0 ],
+					"patching_rect" : [ 393.0, 301.0, 391.0, 32.0 ],
 					"text" : "「pak 変数名 値の個数分の 0」で数値をp5.js側に渡せます。\n"
 				}
 
@@ -302,7 +364,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 67.0, 91.5, 278.0, 30.0 ],
+					"patching_rect" : [ 67.0, 91.5, 278.0, 32.0 ],
 					"text" : "jWebオブジェクトを使ってP5.jsを表示できます\ninletとoutletで数値のやりとりが可能です。"
 				}
 
@@ -315,7 +377,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 181.0, 481.0, 50.0, 20.0 ]
+					"patching_rect" : [ 125.0, 513.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -332,7 +394,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -365,13 +427,14 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-7",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 125.0, 288.0, 150.0, 21.0 ],
+									"patching_rect" : [ 125.0, 288.0, 150.0, 20.0 ],
 									"text" : "Index.htmlを開く処理"
 								}
 
@@ -528,7 +591,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 36.0, 46.0, 71.0, 32.0 ],
+					"patching_rect" : [ 36.0, 46.0, 69.0, 32.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -549,7 +612,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 527.0, 111.0, 20.0, 140.0 ],
+					"patching_rect" : [ 522.0, 147.0, 25.0, 104.0 ],
 					"size" : 256.0
 				}
 
@@ -563,7 +626,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 481.66668701171875, 111.0, 20.0, 140.0 ],
+					"patching_rect" : [ 476.66668701171875, 147.0, 25.0, 104.0 ],
 					"size" : 256.0
 				}
 
@@ -577,7 +640,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 439.33331298828125, 111.0, 20.0, 140.0 ],
+					"patching_rect" : [ 434.33331298828125, 147.0, 25.0, 104.0 ],
 					"size" : 256.0
 				}
 
@@ -597,25 +660,23 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 67.0, 454.0, 50.0, 32.0 ],
-					"text" : "1061 320"
+					"patching_rect" : [ 24.5, 481.0, 75.0, 20.0 ],
+					"text" : "2591 320"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 98.0, 414.0, 73.0, 32.0 ],
+					"patching_rect" : [ 36.0, 414.0, 90.0, 20.0 ],
 					"text" : "route output"
 				}
 
@@ -634,26 +695,16 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 416.0, 50.0, 20.0 ],
-					"text" : "print"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-1",
 					"maxclass" : "jweb",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 36.0, 126.5, 320.0, 240.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 2.0, -0.5, 320.0, 240.0 ],
 					"rendermode" : 0,
-					"url" : "file:///Users/taito-otani/Documents/p5/p5Max/index.html"
+					"url" : "file://index.html"
 				}
 
 			}
@@ -661,15 +712,6 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"order" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -716,6 +758,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -818,19 +867,34 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-21" : [ "live.dial[1]", "live.dial", 0 ],
 			"obj-25" : [ "live.dial[2]", "live.dial", 0 ],
-			"obj-7" : [ "live.dial", "live.dial", 0 ],
 			"obj-35" : [ "live.button", "live.button", 0 ],
+			"obj-7" : [ "live.dial", "live.dial", 0 ],
 			"parameterbanks" : 			{
 
 			}
-
+,
+			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "sketch.js",
+				"bootpath" : "~/Downloads/P5M4L-master",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 
