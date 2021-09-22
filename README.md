@@ -3,10 +3,9 @@ This Sample can make Max for live with P5.js.
 You can use powerful and friendly graphical frameworks "P5.js" in Max MSP via jWeb objects.
 
 
-日本語による解説は以下をご覧ください
+### 日本語による解説は以下をご覧ください
 P5.jsのスケッチをM4LデバイスやMaxMspのjWebオブジェクトから使用するためのサンプルです。
-使い方の詳細は以下でみてみてください。
-
+使い方の詳細は以下をご覧ください。
 qiita
 https://qiita.com/TaitoOtani/items/34a5baae0f25981550d3
 
